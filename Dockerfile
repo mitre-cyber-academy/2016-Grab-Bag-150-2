@@ -5,7 +5,7 @@ RUN apt-get update
 
 RUN apt-get -y install openssh-server python
 
-COPY tinyworld.py /opt/challenge/TrafficDot.py
+COPY TrafficDot.py /opt/challenge/TrafficDot.py
 COPY sshd_config /etc/ssh/sshd_config
 
 

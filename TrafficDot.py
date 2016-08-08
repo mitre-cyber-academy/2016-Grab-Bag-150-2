@@ -64,7 +64,19 @@ def EditDOTname():
         DotNames[dotChoice] = desiredName
         print("DOT is now named "+DotNames[dotChoice])  
     else:
-        print("DOT name not found")        
+        print("DOT name not found")
+
+def RebootDot():
+    print("Traffic Dot Editor".center(40, "-") )
+    choice = raw_input("Enter the Traffic DOT name: ")
+    if choice in DotNames:
+        dotChoice = DotNames.index(choice)
+        print("Rebooting "+DotNames[dotChoice])
+        sleep((random.triangular(2,4 ) ) )
+        print("Reboot for "+DotNames[dotChoice]+" Has completed")
+        sleep(1)
+    else:
+        print("DOT name not found")   
     
 while menuChoice == 0:
     print("Traffic Dot Controller".center(40, "-") )
@@ -79,7 +91,9 @@ while menuChoice == 0:
     if(choice == "2"):
         EditDOTfreq();
     if(choice == "3"):
-        EditDOTname(); 
+        EditDOTname();
+    if(choice == "4"):
+         RebootDot();
     if(choice == "5"):
         print("----------------------------------------")
         print("PROGRAM CLOSED")
@@ -93,7 +107,7 @@ while menuChoice == 0:
     and(DotFreqs[3]=="2.415" or DotFreqs[3]=="2.405" or DotFreqs[3]=="2.445" or DotFreqs[3]=="2.435")
     and(DotFreqs[6]=="2.415" or DotFreqs[6]=="2.405" or DotFreqs[6]=="2.445" or DotFreqs[6]=="2.435")
     and(DotFreqs[7]=="2.415" or DotFreqs[7]=="2.405" or DotFreqs[7]=="2.445" or DotFreqs[7]=="2.435") ):
-        print("!!!!!!!!!!!!!!!!!!YOU WIN!!!!!!!!!!!!!!!!!!!")
+        print("MCA-BC12D29D")
         menuChoice = 1;
         
 
